@@ -1,0 +1,15 @@
+html {
+	background-color:#990000;
+}
+.section1 {
+	width:12.5vw;
+	height: calc(100vw / 10);
+	background-color:black;
+	color:white;
+	margin-top:12.5vw !important;
+	margin-bottom:12.5vw !important;
+	margin:50vw;
+	padding-top:3.125vh;
+	padding-bottom:3.125vh;
+	padding-left:6.25vw;
+	}
