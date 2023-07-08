@@ -17,8 +17,8 @@ let mult = 2;
 for (let i = no; i <= ans.length + 1000; i *= mult) {
   no *= mult;
 
-  /* why doesn't this code show a 6 on the console? because the increment is i *= mult = 2 && since i = no, && no *= mult, 2nd iteration of i will then become 4 instead of 3 */
-  if (i === 2) continue; /* this is to prevent showing 4 on the console */
+  // why doesn't this code show a 6 on the console? because the increment is i *= mult = 2 && since i = no, && no *= mult, 2nd iteration of i will then become 4 instead of 3
+  if (i === 2) continue; // this is to prevent showing 4 on the console
   console.log(no);
   if (no === ans[0]) {
     mult++;
@@ -36,8 +36,9 @@ let arraySum = 0;
 for (let i = 0; i < numArray.length; i++) {
 	arraySum += numArray[i];
 
-	/*if (i === numArray.length - 1) { //numArray.length - 1 means the last value in this array. The if block ensures only the final value is computed
-	console.log(arraySum);*/
+	//if (i === numArray.length - 1) { 
+	//numArray.length - 1 means the last value in this array. The if block ensures only the final value is computed
+	//console.log(arraySum);}
 }
 console.log(arraySum);
 
@@ -46,7 +47,7 @@ console.log(arraySum);
 let maxNum = Math.max(...numArray);
 console.log(maxNum);
 
-/* this does the same as above but it is buggy. I will fix with time */
+// this does the same as above but it is buggy. I will fix with time.
 let max = 0;
 for (let i = 0; i < numArray.length; i++) {
 	if (i === (numArray.length - 1)) {
@@ -85,7 +86,7 @@ function calcAverage(array) {
 }
 const avg = calcAverage(numArray);
 
-/* this code checks the number of vowels in a string */
+/* this code checks the number of vowels in the str variable above. */
 
 function checkVowels(string) {
 	let vowelCount = 0;
