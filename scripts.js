@@ -56,15 +56,18 @@ for (let i = 0; i < numArray.length; i++) {
 	}
 }
 
-/*
+/* this code reverses a string */
+
 let str = 'Perfect Introduction';
-let reverse;
+let reverse = [];
+let answer;
 function reversion(string) {
 	const parts = string.split("");
 	for (let i = parts.length - 1; i >= 0; i--) {
-		const answer = reverse.push(parts[i]);
+		reverse.push(parts[i]);
+		answer = reverse.join("");
 	}
-	return reverse;
+	return answer;
 }
 const call = reversion(str);
-*/
+console.log(call);
