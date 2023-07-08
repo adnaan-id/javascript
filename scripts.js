@@ -43,6 +43,7 @@ for (let i = 0; i < numArray.length; i++) {
 console.log(arraySum);
 
 /* now to find the max value in above array */
+/* **************************************** */
 
 let maxNum = Math.max(...numArray);
 console.log(maxNum);
@@ -102,3 +103,41 @@ function checkVowels(string) {
 	return vowelCount;
 }
 const vowelCall = checkVowels(str);
+
+/* this code checks if a number is even or odd */
+
+function checker(number) {
+	const even = true;
+	const odd = false;
+	if (number % 2 === 0) {
+		console.log(even);
+	} else {
+		console.log(odd);
+	}
+	return;
+}
+
+checker(numArray[0]);
+
+/* this code capitalizes the first words in a string */
+/* ************************************************* */
+
+function capitalizer(string) {
+	const separator = string.split("");
+	const element1 = separator.shift( ); // this removes the first element.
+	separator.unshift(element1.toUpperCase( )); // this replaces the first lmnt with an uppercase letter.
+
+// below code should capitalize any element after a space but it is buggy
+
+	let $LMNTafterSpace;
+	for (let i = 0; i < separator.length; i++) {
+		if (separator[i] === ' ') {
+			$LMNTafterSpace = separator[i + 1];
+		// 	separator.splice($LMNTafterSpace, 1);
+		//	separator.splice($LMNTafterSpace, 0, $LMNTafterSpace.toUpperCase( ));
+		}
+	}
+	console.log(separator);
+	return;
+}
+capitalizer("perfect introduction");
