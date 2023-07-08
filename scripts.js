@@ -4,11 +4,9 @@
 
 let sum = 0;
 for (let i = 20; i >= 1; i--) {
-  sum += i;
-  if (i === 1) {
-    console.log(sum);
-  }
+	sum += i;
 }
+console.log(sum);
 
 /* this code multiplies numbers by 2 until 8, then by 3 until 24, then by 4 until 384*/
 
@@ -37,10 +35,11 @@ const numArray = [1, 2, 11, 54, 2, 4, 6, 8, 10, 112, 111];
 let arraySum = 0;
 for (let i = 0; i < numArray.length; i++) {
 	arraySum += numArray[i];
-	if (i === numArray.length - 1) { /* numArray.length - 1 means the last value in this array. The if block ensures only the final value is computed */
-	console.log(arraySum);
-	}
+
+	/*if (i === numArray.length - 1) { //numArray.length - 1 means the last value in this array. The if block ensures only the final value is computed
+	console.log(arraySum);*/
 }
+console.log(arraySum);
 
 /* now to find the max value in above array */
 
@@ -67,7 +66,38 @@ function reversion(string) {
 		reverse.push(parts[i]);
 		answer = reverse.join("");
 	}
-	return answer;
+	console.log(answer)
+	return;
 }
 const call = reversion(str);
-console.log(call);
+
+/* this code calculates the average of the numbers in the above array, numArray */
+
+function calcAverage(array) {
+	let total = 0;
+	let average = 0;
+	for (let i = 0; i < array.length; i++) {
+		total += array[i];
+	}
+	average = total / array.length;
+	console.log(average);
+	return;
+}
+const avg = calcAverage(numArray);
+
+/* this code checks the number of vowels in a string */
+
+function checkVowels(string) {
+	let vowelCount = 0;
+	const splitString = string.split("");
+	for (let i = 0; i < splitString.length; i++) {
+		if (splitString[i] == 'a' || splitString[i] == 'e' || splitString[i] == 'i' || splitString[i] == 'o'|| splitString[i] == 'u') {
+			vowelCount += 1;
+		} else if (splitString[i] == 'A' || splitString[i] == 'E' || splitString[i] == 'I' || splitString[i] == 'O' || splitString[i] == 'U') {
+			vowelCount += 1;
+		}
+	}
+	console.log(`there are ${vowelCount} vowels in passed string`);
+	return vowelCount;
+}
+const vowelCall = checkVowels(str);
