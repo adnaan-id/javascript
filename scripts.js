@@ -175,4 +175,22 @@ capitalizer(strToPass);
 }
 capitalizer("perfect introduction");*/
 
-/* this code checks the equality of two arrays */
+/* this code checks the equality of two arrays, including the order their elements are at */
+
+function equalizer(array1, array2) {
+	let a;
+	let b;
+	for (let i = 0; i < array1.length; i++) {
+		a = array1[i];
+	}
+	for (let i = 0; i < array2.length; i++) {
+		b = array2[i];
+	}
+	if (a.length === b.length && a === b) {
+		console.log(true);
+	} else {
+		console.log(false);
+	}
+	return;
+}
+equalizer([1, 2, 2], [1, 2, 2]);
