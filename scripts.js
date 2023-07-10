@@ -8,7 +8,7 @@ function repsCounter(reps) {
 	for (let i = reps; i >= 1; i--) {
 		sum += i;
 	}
-	console.log(sum);
+	console.log(`${sum} reps`);
 	return;
 }
 repsCounter(repsCap);
@@ -45,7 +45,7 @@ function addUpElements(array) {
 	for (let i = 0; i < array.length; i++) {
 		arraySum += array[i];
 		//if (i === array.length - 1) { 
-		////array.length - 1 means the last value in this array. The if block ensures only the final value is computed
+		////array.length - 1 means the last value in this array. The if block ensures only the final value is computed. This can also be achieved by writing your outpud outside the loop.
 		//console.log(arraySum);}
 		}
 	console.log(arraySum);
@@ -102,7 +102,7 @@ function calcAverage(array) {
 		total += array[i];
 	}
 	average = total / array.length;
-	console.log(average);
+	console.log(`the average value of ${array} is ${average}`);
 	return;
 }
 calcAverage(numArray);
