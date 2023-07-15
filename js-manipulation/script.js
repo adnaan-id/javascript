@@ -27,5 +27,15 @@ function fizzBuzz (mult3, mult5, both) {
 	console.log(arr);
 	return;
 }
-
 fizzBuzz(X3, X5, X3X5);
+
+/* This code is a palindrome checker */
+
+function _Palindrome(string) {
+	const splits = string.toLowerCase();
+	const lCase = splits.split("")
+	const forward = lCase.reverse().join("");
+	console.log(forward === splits);
+	return;
+}
+_Palindrome("mallam");
