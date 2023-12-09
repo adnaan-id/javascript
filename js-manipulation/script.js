@@ -1,3 +1,5 @@
+"use strict";
+
 /* this code prints the numbers from 1-100, with Fizz instead of multiples of 3, Buzz instead of multiples of 5 and FizzBuzz for multiples of both */
 
 const X3 = "Fizz";
@@ -30,7 +32,7 @@ function fizzBuzz (mult3, mult5, both) {
 fizzBuzz(X3, X5, X3X5);
 
 /* This code is a palindrome checker */
-
+/*
 function _Palindrome(string) {
 	const splits = string.toLowerCase();
 	const lCase = splits.split("")
@@ -38,4 +40,61 @@ function _Palindrome(string) {
 	console.log(forward === splits);
 	return;
 }
-_Palindrome("mallam");
+_Palindrome("a man a plan a canal panama");
+*/
+/* this code checks if a number is a prime number */
+
+/*function primeChecker(num) {
+	const numArr = [1, num];
+	let ans;
+	for (let i = num; i < numArr; i++) {
+		if (num % numArr[i] !== 0) {
+			ans = false;
+		} else {
+			ans = true;
+		}
+		if (math.sqrt(numArr[i]) !== math.sqrt(num)) ans = false;
+	}
+	console.log(ans);
+	return;
+}
+primeChecker(12);*/
+
+const calculator = {
+	add: function addition(x, y) {
+		return x + y;
+	},
+	subtract: function subtraction(x, y) {
+		return x - y;
+	},
+	multiply: function multiplication(x, y) {
+		return x * y;
+	},
+	divide: function division(x, y) {
+		if (y === 0) return "num1 not divisible by 0!";
+		return x / y;
+	}
+}
+
+const num1 = parseFloat(prompt("insert number x:"));
+const num2 = parseFloat(prompt("insert number y:"));
+
+const operation = prompt("choose an operation: (+, -, *, /)");
+
+switch (operation) {
+	case "+":
+		result = calculator.add(num1, num2);
+		break;
+	case "-":
+		result = calculator.subtract(num1, num2);
+		break;
+	case "*":
+		result = calculator.multiply(num1, num2);
+		break;
+	case "/":
+		result = calculator.divide(num1, num2);
+		break;
+	default:
+		result = "Invalid operation";
+}
+alert("result: " + result);

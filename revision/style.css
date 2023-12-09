@@ -1,0 +1,13 @@
+section{
+	margin-left:25vw;
+	margin-right:25vw;
+	margin-top:25vh;
+	margin-bottom:25vh;
+	background-color:#000;
+}
+p{
+	margin:25%;
+	width:50%;
+	padding-left:5%;
+	background-color:white;
+}
