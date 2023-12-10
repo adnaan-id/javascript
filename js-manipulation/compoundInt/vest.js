@@ -1,6 +1,11 @@
 'use strict';
 
-/* An investor wants to invest a base amount of money for the first month, then an additional salary every month for as long as specified, while still reinvesting each profit earned every month, at a fixed rate of 15% per month.*/
+/*
+ * An investor wants to invest a base amount of money for the first month, 
+ * then an additional salary every month for as long as specified, 
+ * while still reinvesting each profit earned every month, 
+ * all at a fixed rate of 15% per month.
+ */
 
 function vest (timeInMonths, salary) {
 
@@ -15,8 +20,14 @@ function vest (timeInMonths, salary) {
 		profit = (15 / 100) * newCapital;
 		newCapital += profit;
 	}
-	return [profit, rawBase, base, newCapital];
+	const results = {
+		"Profit": profit,
+		"Raw Base": rawBase,
+		"Base": base,
+		"New Capital": newCapital
+	};
+	return results;
 }
 
-const mCap = vest(1, 150000);
+const mCap = vest(60, 120000);
 console.log(mCap);
